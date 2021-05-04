@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * show a new Notification
  *
@@ -18,3 +20,10 @@ function Notification({ html = "", className = "info" } = {}) {
     this.el.classList.add("hide");
   }, 2000);
 }
+
+window.onload = () => {
+  new Notification({
+    html: "<strong>여러분!</strong> 전할 이야기가 있어요.",
+    className: "success",
+  });
+};

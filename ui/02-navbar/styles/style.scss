@@ -1,0 +1,135 @@
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/reset";
+
+body {
+  background: #f7f7f7;
+  font-family: "Noto Sans KR", sans-serif;
+}
+// a11y
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// navbar
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.navbar__logo {
+  margin-left: 2rem;
+}
+.navbar__logo a {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar__menu {
+  display: flex;
+  margin-right: 2rem;
+
+  // 1depth menu
+  > li {
+    margin-left: 1.5rem;
+
+    > a {
+      display: flex;
+      align-items: center;
+      min-height: 60px;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  // 1depth menu: selected
+  > li.seleted {
+    box-shadow: inset 0 -2px 0 #000;
+
+    > a {
+      font-weight: 700;
+    }
+  }
+}
+.navbar__toggle {
+  display: none;
+}
+
+@include respond-below(md) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    margin-left: 1.25rem;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    border-top: 1px solid transparent;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+
+    .navbar.active & {
+      opacity: 1;
+      height: auto;
+      padding: 0.5rem 0;
+      border-color: #f7f7f7;
+    }
+
+    // 1depth menu
+    > li {
+      width: 100%;
+      margin: 0;
+
+      > a {
+        min-height: auto;
+        padding: 1rem 1.25rem;
+      }
+    }
+
+    // 1depth menu: selected
+    > li.seleted {
+      box-shadow: none;
+    }
+  }
+
+  .navbar__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    min-width: 2rem;
+    min-height: 2rem;
+    border: 0;
+    background-color: transparent;
+  }
+  .navbar__toggle .cross {
+    display: none;
+  }
+  .navbar.active .navbar__toggle .cross {
+    display: block;
+  }
+  .navbar.active .navbar__toggle .hamburger {
+    display: none;
+  }
+}
