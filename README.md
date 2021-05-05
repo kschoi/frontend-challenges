@@ -13,4 +13,4 @@ UI 컴포넌트 케이스
 
 ## projects
 
-1. [01-cats](./projects/cats)
+1. [i-love-cat](./projects/i-love-cat)
