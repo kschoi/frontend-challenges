@@ -1,16 +1,24 @@
-# frontend challenges
+# Frontend Challenges
 
-## ui
-
-UI 컴포넌트 케이스
-
-1. [01-notification](./ui/01-notification)
-2. [02-navbar](./ui/02-navbar)
-3. [03-drawer](./ui/03-drawer)
-4. [04-item-list](./ui/04-item-list)
+Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## projects
+## Fundamental 🎈
 
-1. [i-love-cat](./projects/i-love-cat)
+1. [event-delegation](./fundamental/event-delegation) - 이벤트 위임을 이해하기 위한 예제입니다.
+
+<br>
+
+## UI Components 🎀
+
+1. [notification](./ui/notification) - 로드 이후 하단에 노출되었다가 사라지는 공지 알림 UI 예제입니다.
+2. [navbar](./ui/navbar) - SCSS를 활용한 반응형 네비게이션 바 UI 예제입니다.
+3. [drawer](./ui/drawer) - 서랍형 UI 예제입니다.
+4. [item-list](./ui/item-list) - 상품리스트와 스와이퍼 API 적용 UI 예제입니다.
+
+<br>
+
+## Projects 🎁
+
+1. [i-love-cat](./projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
