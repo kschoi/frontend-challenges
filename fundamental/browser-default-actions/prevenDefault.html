@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="elem">우클릭해보세요.</button>
+
+    <script>
+      elem.oncontextmenu = function (event) {
+        event.preventDefault();
+        alert("버튼의 컨텍스트메뉴를 만들 수 있어요.");
+      };
+
+      document.oncontextmenu = function (event) {
+        event.preventDefault();
+        alert("문서의 컨텍스트메뉴를 만들 수 있어요.");
+      };
+    </script>
+  </body>
+</html>
