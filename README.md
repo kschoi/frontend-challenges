@@ -7,6 +7,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 ## Fundamental 🎈
 
 1. [event-delegation](./fundamental/event-delegation) - 이벤트 위임을 이해하기 위한 예제입니다.
+2. [passive-listener](./fundamental/passive-listener) - 스크롤 성능 향상을 위한 addEventListener의 passive 옵션을 살펴봅니다.
 
 <br>
 

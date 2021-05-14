@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passive listener</title>
+  </head>
+  <body>
+    <div style="height: 200vh"></div>
+    <script>
+      window.addEventListener(
+        "scroll",
+        function (e) {
+          // preventDefault를 사용하면 에러를 발생시킵니다.
+          e.preventDefault();
+          // 에러 발생: Unable to preventDefault inside passive event listener invocation.
+        },
+        {
+          passive: true,
+        }
+      );
+    </script>
+  </body>
+</html>
