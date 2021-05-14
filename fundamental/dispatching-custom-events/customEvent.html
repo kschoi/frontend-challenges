@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre id="rabbit">
+      |\   /|
+       \|_|/
+       /. .\
+      =\_Y_/=
+       {>o<}
+    </pre>
+    <button onclick="hide()">토끼 숨기기</button>
+
+    <script>
+      function hide() {
+        let event = new CustomEvent("hide", {
+          // 3. 주의 깊게 봐야 할 점은 cancelable: true입니다.
+          //    event.preventDefault()가 제대로 동작하게 하려면 이벤트 hide의 cancelable을 반드시 true로 지정해줘야 합니다.
+          //   그렇지 않으면 event.preventDefault()가 무시됩니다.
+          cancelable: true,
+
+          // 1. CustomEvent는 특별한 필드인 detail을 가지고 있습니다.
+          //    CustomEvent는 detail 필드를 통해 상세한 이벤트 정보를 정의할 수 있습니다.
+          //    detail은 어떤 데이터도 담을 수 있습니다.
+          detail: { name: "토끼" },
+        });
+
+        // 5. 이벤트 기본동작이 취소되면 elem.dispatchEvent(event) 호출 시 false가 반환됩니다.
+        //    해당 이벤트를 디스패치 하는 코드에선 이를 통해 기본동작이 취소되어야 한다는 것을 인지합니다.
+        if (!rabbit.dispatchEvent(event)) {
+          console.log("이벤트 기본동작을 취소했습니다.");
+        } else {
+          rabbit.hidden = true;
+        }
+      }
+
+      rabbit.addEventListener("hide", function (event) {
+        // 2. event 객체를 통해 넘어온 detail 정보를 활용할 수 있습니다.
+        alert(`안녕! ${event.detail.name}`);
+
+        // 4. preventDefault가 기본 동작을 취소합니다.
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
