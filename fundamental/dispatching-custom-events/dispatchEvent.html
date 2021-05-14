@@ -7,10 +7,17 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="elem" onclick="alert('이벤트 핸들러 실행!');">Autoclick</button>
+    <p id="elem">자바스크립트에서 이 엘리먼트에 `hello`라고 이름 지은 커스텀 이벤트를 디스패치합니다.</p>
 
     <script>
-      let event = new Event("click");
+      // document에 이벤트 핸들러 등록.
+      document.addEventListener("hello", function (event) {
+        // (1)
+        alert(`${event.target.tagName}에서 인사를 하네요!`); // Hello from H1
+      });
+
+      // 엘리먼트에서 이벤트 디스패치.
+      let event = new Event("hello", { bubbles: true }); // (2)
       elem.dispatchEvent(event);
     </script>
   </body>
