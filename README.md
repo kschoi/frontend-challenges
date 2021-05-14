@@ -8,6 +8,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 1. [event-delegation](./fundamental/event-delegation) - 'behavior' 패턴 등 이벤트 위임을 이해하기 위한 이벤트를 등록해보는 예제입니다.
 2. [browser-default-actions](./fundamental/browser-default-actions) - 브라우저 기본 액션을 막는 방법과, 스크롤 성능을 향상시킬 수 있는 passive 옵션을 살펴봅니다.
+3. [dispatching-custom-events](./fundamental/dispatching-custom-events) - 커스텀 이벤트 디스패치 예제입니다.
 
 <br>
 
