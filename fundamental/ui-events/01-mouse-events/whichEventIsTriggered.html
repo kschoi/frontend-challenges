@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      onmousedown="return logMouse(event)"
+      onmouseup="return logMouse(event)"
+      onclick="return logMouse(event)"
+      oncontextmenu="return logMouse(event)"
+      ondblclick="return logMouse(event)"
+      value="마우스 왼쪽이나 오른쪽 버튼을 사용해 클릭해보세요."
+    />
+
+    <input onclick="logClear('test')" value="초기화" type="button" />
+
+    <form id="testform" name="testform">
+      <!-- 
+        모든 마우스 이벤트가 버튼 아래 창에 기록되는데, 
+        이벤트 발생 간격이 1초 이상일 때는 이벤트 사이에 가로 선이 추가되도록 해놓았습니다. 
+        이벤트 이름 옆엔 어떤 마우스 버튼이 이벤트를 발생시켰는지를 알려주는 button 프로퍼티도 보이는데, 
+        button 프로퍼티에 대한 내용은 바로 아래에서 설명하도록 하겠습니다.
+      -->
+      <textarea style="font-size: 12px; height: 150px; width: 360px"></textarea>
+    </form>
+
+    <script>
+      {
+        let timer = 0;
+
+        function showMessage(text, form) {
+          if (timer == 0) {
+            timer = new Date();
+          }
+
+          let _timer = new Date();
+
+          if (_timer - timer > 300) {
+            text = "------------------------------\n" + text;
+          }
+
+          let area = document.forms[form + "form"].getElementsByTagName("textarea")[0];
+
+          area.value += text + "\n";
+          area.scrollTop = area.scrollHeight;
+
+          timer = _timer;
+        }
+
+        function logMouse(e) {
+          console.log(e);
+          let evt = e.type;
+          while (evt.length < 11) evt += " ";
+          showMessage(evt + " button=" + e.button, "test");
+          return false;
+        }
+
+        function logClear(form) {
+          timer = 0;
+          document.forms[form + "form"].getElementsByTagName("textarea")[0].value = "";
+          lines = 0;
+        }
+
+        window.logClear = logClear;
+        window.logMouse = logMouse;
+      }
+    </script>
+  </body>
+</html>
