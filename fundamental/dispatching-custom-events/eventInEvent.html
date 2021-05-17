@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="menu">메뉴(클릭해주세요)</button>
+
+    <script>
+      menu.onclick = function () {
+        alert(1);
+
+        menu.dispatchEvent(
+          new CustomEvent("menu-open", {
+            bubbles: true,
+          })
+        );
+
+        alert(2);
+      };
+
+      // 1과 2 사이에 트리거됩니다.
+      document.addEventListener("menu-open", () => alert("중첩 이벤트"));
+      // 얼럿창에 ‘1’, ‘중첩 이벤트’, '2’가 차례대로 출력되는 것을 확인할 수 있습니다.
+      // 중첩 이벤트 'menu-open'이 document에 할당된 핸들러에서 처리됩니다.
+      // 중첩 이벤트의 전파와 핸들링이 외부 코드(onclick)의 처리가 다시 시작되기 전에 끝났습니다.
+    </script>
+  </body>
+</html>
