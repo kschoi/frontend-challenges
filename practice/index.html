@@ -5,7 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <!-- BEM(Block __Element --Modifier) -->
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="http://www.google.com">Gifts</a>
+        </div>
+        <ul class="navbar__menu">
+          <li class="selected">
+            <a href="#">birthday</a>
+          </li>
+          <li><a href="#">anniversary</a></li>
+          <li><a href="#">cakes</a></li>
+          <li><a href="#">flowers</a></li>
+        </ul>
+        <button class="navbar__toggle">메뉴 토글</button>
+      </nav>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
