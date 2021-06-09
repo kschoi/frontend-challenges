@@ -1,4 +1,4 @@
-# 02-navbar
+# navbar
 
 ## Question
 
