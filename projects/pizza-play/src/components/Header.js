@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
@@ -16,9 +17,11 @@ const Header = () => {
           <path fill="none" d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z" />
         </svg>
       </div>
-      <div className="title">
+      {/* motion 컴포넌트로 변경하고 animate 속성을 먼저 준 후,
+       initial을 넣어봤을 때 차이를 확인하세요. */}
+      <motion.div className="title" initial={{ y: -250 }} animate={{ y: -10 }}>
         <h1>Pizza Play</h1>
-      </div>
+      </motion.div>
     </header>
   );
 };
