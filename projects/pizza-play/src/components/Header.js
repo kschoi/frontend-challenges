@@ -17,9 +17,16 @@ const Header = () => {
           <path fill="none" d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z" />
         </svg>
       </div>
-      {/* motion 컴포넌트로 변경하고 animate 속성을 먼저 준 후,
-       initial을 넣어봤을 때 차이를 확인하세요. */}
-      <motion.div className="title" initial={{ y: -250 }} animate={{ y: -10 }}>
+      {/* transition 프롭의 type 기본값은 spring 입니다. 
+					1. 바운스가 싫다면 type을 tween으로 바꿔보세요.
+          2. type을 spring으로 바꾸고 stiffness(뻣뻣함)을 120을 줘보세요. 그리고 5로도 변경해보세요. 
+             기본값은 100입니다.  */}
+      <motion.div 
+				className="title" 
+				initial={{ y: -250 }} 
+				animate={{ y: -10 }}
+				transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+			>
         <h1>Pizza Play</h1>
       </motion.div>
     </header>
