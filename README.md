@@ -23,4 +23,5 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## Projects 🎁
 
-1. [i-love-cat](./projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
+1. [pizza](./projects/pizza) - React+Framer-motion으로 만든 pizza 토핑을 조합할 수 있는 기능의 SPA입니다.
+2. [i-love-cat](./projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
