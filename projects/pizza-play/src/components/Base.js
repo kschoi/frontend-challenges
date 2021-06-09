@@ -6,7 +6,6 @@ const Base = ({ addBase, pizza }) => {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
   return (
-    // 2. 페이지는 반대편에서 나오게 해볼까요!
     <motion.div 
       className="container base"
       initial={{ x: '100vw' }}
@@ -18,9 +17,15 @@ const Base = ({ addBase, pizza }) => {
         {bases.map(base => {
           let spanClass = pizza.base === base ? 'active' : '';
           return (
-            <li key={base} onClick={() => addBase(base)}>
+            // 2. hover 효과를 추가합니다.
+            <motion.li 
+              key={base}
+              onClick={() => addBase(base)}
+              whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
               <span className={spanClass}>{ base }</span>
-            </li>
+            </motion.li>
           )
         })}
       </ul>
@@ -30,11 +35,19 @@ const Base = ({ addBase, pizza }) => {
           className="next"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
-          // 1. transition을 추가해보세요!
 					transition={{ type: 'spring', stiffness: 120 }}
         >
           <Link to="/toppings">
-            <button>Next</button>
+            <motion.button
+              // 1. hover 효과를 복붙합니다.
+		          whileHover={{ 
+		            scale: 1.1,
+		            textShadow: '0 0 8px rgb(255,255,255)',
+		            boxShadow: '0 0 8px rgb(255,255,255)',
+		          }}					
+						>
+							Next
+						</motion.button>
           </Link>
         </motion.div>
       )}
