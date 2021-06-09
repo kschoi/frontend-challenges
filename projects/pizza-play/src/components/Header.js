@@ -17,7 +17,7 @@ const Header = () => {
         </svg>
       </div>
       <div className="title">
-        <h1>Pizza</h1>
+        <h1>Pizza Play</h1>
       </div>
     </header>
   );
