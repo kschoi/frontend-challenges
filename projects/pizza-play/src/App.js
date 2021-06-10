@@ -5,12 +5,13 @@ import Home from "./components/Home";
 import Base from "./components/Base";
 import Toppings from "./components/Toppings";
 import Order from "./components/Order";
+import Modal from "./components/Modal";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-  // 1. 라우터가 변경될 때 마다 location에 현재 로케이션이 담깁니다.
   const location = useLocation();
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
+  const [showModal, setShowModal] = useState(false);
 
   const addBase = (base) => {
     setPizza({ ...pizza, base });
@@ -29,8 +30,11 @@ function App() {
   return (
     <>
       <Header />
-      <AnimatePresence exitBeforeEnter>
-        {/* 2. AnimatePresence가 로케이션에 따라 언제 애니메이션이 끝나야할 지 알 수 있도록 합니다. */}
+      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <AnimatePresence
+        exitBeforeEnter
+        onExitComplete={() => setShowModal(false)}
+      >
         <Switch location={location} key={location.key}>
           <Route path="/base">
             <Base addBase={addBase} pizza={pizza} />
@@ -39,7 +43,7 @@ function App() {
             <Toppings addTopping={addTopping} pizza={pizza} />
           </Route>
           <Route path="/order">
-            <Order pizza={pizza} />
+            <Order pizza={pizza} setShowModal={setShowModal} />
           </Route>
           <Route path="/">
             <Home />
