@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -21,12 +21,12 @@ const Header = () => {
 					1. 바운스가 싫다면 type을 tween으로 바꿔보세요.
           2. type을 spring으로 바꾸고 stiffness(뻣뻣함)을 120을 줘보세요. 그리고 5로도 변경해보세요. 
              기본값은 100입니다.  */}
-      <motion.div 
-				className="title" 
-				initial={{ y: -250 }} 
-				animate={{ y: -10 }}
-				transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-			>
+      <motion.div
+        className="title"
+        initial={{ y: -250 }}
+        animate={{ y: -10 }}
+        transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+      >
         <h1>Pizza Play</h1>
       </motion.div>
     </header>
