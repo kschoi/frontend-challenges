@@ -40,7 +40,7 @@ const Order = ({ pizza, setShowModal }) => {
     setTimeout(() => {
       setShowModal(true);
     }, 3000);
-  }, []);
+  }, [setShowModal]);
 
   return (
     <motion.div
