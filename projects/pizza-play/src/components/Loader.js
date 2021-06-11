@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 
 const loaderVariants = {
   animateOne: {
@@ -17,16 +17,31 @@ const loaderVariants = {
       },
     },
   },
+  animateTwo: {
+    y: [0, -40],
+    x: 0,
+    transition: {
+      y: {
+        yoyo: Infinity,
+        duration: 0.25,
+        ease: "easeOut",
+      },
+    },
+  },
 };
 
 const Loader = () => {
+  const [animation, cycleAnimation] = useCycle("animateOne", "animateTwo");
+
   return (
-    // initial 프롭은 처음 그려진 대로 사용할 것이기 때문에 필요가 없습니다.
-    <motion.div
-      className="loader"
-      variants={loaderVariants}
-      animate="animateOne"
-    ></motion.div>
+    <>
+      <motion.div
+        className="loader"
+        variants={loaderVariants}
+        animate={animation}
+      ></motion.div>
+      <div onClick={() => cycleAnimation()}>Cycle Loader</div>
+    </>
   );
 };
 
