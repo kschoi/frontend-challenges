@@ -14,19 +14,22 @@
   </head>
   <body>
     <div id="root">
-      <!-- Block __Element --Modifier -->
       <nav class="navbar">
         <div class="navbar__logo">
           <a href="#">Gifts</a>
         </div>
         <ul class="navbar__menu">
-          <li><a href="#">Birthday</a></li>
+          <li class="selected"><a href="#">Birthday</a></li>
           <li><a href="#">Anniversary</a></li>
           <li><a href="#">Cakes</a></li>
           <li><a href="#">Flowers</a></li>
         </ul>
+        <button class="navbar__toggle">
+          <span class="navbar__toggleIcon">
+            <span class="sr-only">메뉴</span>
+          </span>
+        </button>
       </nav>
-      <button class="navbar__toggle">메뉴</button>
     </div>
   </body>
 </html>

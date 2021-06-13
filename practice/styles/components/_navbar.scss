@@ -1,0 +1,100 @@
+.navbar {
+  display: flex; // 자식 요소를 오뎅으로 만들고 오뎅 꼬치 끼워넣기
+  // flex-direction: column; // 오뎅 꼬치의 방향 (row: 가로, column: 세로)
+  justify-content: space-between; // 오뎅 꼬치의 수평 방향의 정렬 결정
+  align-items: center; // 오뎅 꼬치의 수직 방향의 정렬 결정
+}
+// body의 기본 폰트 사이즈는 16px
+.navbar__logo {
+  margin-left: 1.25rem;
+}
+.navbar__logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.navbar__menu {
+  display: flex;
+  margin-right: 1.25rem;
+}
+.navbar__menu > li {
+  margin-left: 1rem;
+
+  &.selected {
+    box-shadow: inset 0 -2px 0 $text-color;
+  }
+}
+.navbar__menu > li > a {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  text-decoration: none;
+}
+.navbar__toggle {
+  display: none;
+}
+@include respond-below(md) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__logo {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    .navbar.active & {
+      display: flex;
+    }
+  }
+  .navbar__menu > li {
+    &.selected {
+      box-shadow: none;
+    }
+  }
+  .navbar__toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    min-width: 18px;
+    min-height: 18px;
+    background: transparent;
+    outline: none;
+  }
+  .navbar__toggleIcon,
+  .navbar__toggleIcon::before,
+  .navbar__toggleIcon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 19px;
+    height: 1px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar__toggleIcon {
+    &::before {
+      top: -5px;
+    }
+    &::after {
+      bottom: -5px;
+    }
+    .navbar.active & {
+      background: transparent;
+    }
+    .navbar.active &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    .navbar.active &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

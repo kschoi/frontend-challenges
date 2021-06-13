@@ -137,6 +137,166 @@ table {
 
 body {
   background: purple;
+  color: #fff;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+  color: #fff;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__logo {
+  margin-left: 1.25rem;
+}
+
+.navbar__logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.25rem;
+}
+
+.navbar__menu > li {
+  margin-left: 1rem;
+}
+
+.navbar__menu > li.selected {
+  -webkit-box-shadow: inset 0 -2px 0 #fff;
+          box-shadow: inset 0 -2px 0 #fff;
+}
+
+.navbar__menu > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  text-decoration: none;
+}
+
+.navbar__toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .navbar__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar__menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar.active .navbar__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__menu > li.selected {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar__toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 0;
+    min-width: 18px;
+    min-height: 18px;
+    background: transparent;
+    outline: none;
+  }
+  .navbar__toggleIcon,
+  .navbar__toggleIcon::before,
+  .navbar__toggleIcon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 19px;
+    height: 1px;
+    background: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar__toggleIcon::before {
+    top: -5px;
+  }
+  .navbar__toggleIcon::after {
+    bottom: -5px;
+  }
+  .navbar.active .navbar__toggleIcon {
+    background: transparent;
+  }
+  .navbar.active .navbar__toggleIcon::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .navbar.active .navbar__toggleIcon::after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
