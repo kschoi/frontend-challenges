@@ -1,0 +1,8 @@
+@import "./variables";
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @content;
+  } @else {
+  }
+}

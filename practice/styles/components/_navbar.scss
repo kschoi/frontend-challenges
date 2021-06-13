@@ -1,0 +1,40 @@
+.navbar {
+  position: sticky;
+  display: flex;
+  // flex-direction: row; // 오뎅 꼬치의 방향(row: 가로, column: 세로)
+  justify-content: space-between; // 오뎅 꼬치의 수평 방향대로 배치하는 방법
+  align-items: center; // 오뎅 꼬치의 수직 방향대로 배치하는 방법
+}
+.navbar__logo {
+  margin-left: 1.25rem;
+}
+.navbar__logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.navbar__menu {
+  display: flex;
+  margin-right: 1.25rem;
+}
+.navbar__menu > li {
+  margin-left: 1.5rem;
+
+  &.selected {
+    box-shadow: inset 0 -2px 0 #fff;
+  }
+}
+.navbar__menu > li > a {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  text-decoration: none;
+}
+.navbar__toggle {
+  display: none;
+}
+
+@include respond-below(sm) {
+  body {
+    background: green;
+  }
+}

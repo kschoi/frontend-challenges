@@ -4,8 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
     <script src="index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div class="navbar">
+        <!-- logo -->
+        <div class="navbar__logo">
+          <a href="#">Gifts</a>
+        </div>
+        <!-- menu -->
+        <ul class="navbar__menu">
+          <li class="selected"><a href="#">birthday</a></li>
+          <li><a href="#">anniversary</a></li>
+          <li><a href="#">cakes</a></li>
+          <li><a href="#">flowers</a></li>
+        </ul>
+        <!-- toggle button -->
+        <button class="navbar__toggle">
+          <span class="sr-only">메뉴 토글</span>
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
