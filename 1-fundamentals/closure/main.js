@@ -36,14 +36,14 @@
 /*************************************************************************************
  * 3. 루프 클로저 문제 해결하기
  *************************************************************************************/
-window.onload = function () {
-  for (var i = 1; i < 5; i++) {
-    document.getElementById("btn" + i).addEventListener(
-      "click",
-      function () {
-        console.log(i);
-      },
-      false
-    );
-  }
-};
+// window.onload = function () {
+//   for (var i = 1; i < 5; i++) {
+//     document.getElementById("btn" + i).addEventListener(
+//       "click",
+//       function () {
+//         console.log(i);
+//       },
+//       false
+//     );
+//   }
+// };
