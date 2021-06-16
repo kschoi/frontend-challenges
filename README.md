@@ -7,6 +7,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 ## 1. Fundamentals 🚌
 
 1. [closure](./1-fundamentals/closure) - 클로저를 이해하기 위한 예제입니다.
+2. [array-like-object](./1-fundamentals/array-like-object) - array-like 객체를 이해하기 위한 예제입니다.
 
 <br>
 
