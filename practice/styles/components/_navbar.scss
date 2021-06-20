@@ -32,10 +32,31 @@
 .navbar__toggle {
   display: none;
 }
+
 @include respond-below(md) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-bottom-left-radius: 200vw;
+      border-bottom-right-radius: 200vw;
+      transform: scale(2);
+      background: rgba(255, 255, 255, 0.12);
+      transition: all 0.6s cubic-bezier(0.13, 0.63, 0.8, 0.15);
+    }
+    &.active::before {
+      height: 100vh;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: scale(1);
+    }
   }
   .navbar__logo {
     display: flex;
@@ -43,10 +64,18 @@
     align-items: center;
   }
   .navbar__menu {
-    display: none;
     flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 0.6s ease-out;
+
     .navbar.active & {
       display: flex;
+      height: 100%;
+      padding: 0.5rem 0;
+      opacity: 1;
+      transition-delay: 0.5s;
     }
   }
   .navbar__menu > li {
