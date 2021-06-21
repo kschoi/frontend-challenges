@@ -30,5 +30,8 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## 4. Projects 🎁
 
-1. [pizza-play](https://github.com/kschoi/pizza-play) - React+Framer-motion으로 만든 pizza 토핑을 조합할 수 있는 기능의 SPA입니다.
-2. [i-love-cat](./4-projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
+1. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
+2. [pizza-play](https://github.com/kschoi/pizza-play) - React, Framer-motion으로 만든 페이지 라우팅 애니메이션 예제입니다.
+<--
+3. [i-love-cat](./4-projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
+-->
