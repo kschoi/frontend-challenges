@@ -1,12 +1,5 @@
 "use strict";
 
-window.onload = function () {
-  const navbar = document.querySelector(".navbar");
-  const navbarToggle = document.querySelector(".navbar__toggle");
-
-  if (navbar && navbarToggle) {
-    navbarToggle.addEventListener("click", function () {
-      navbar.classList.toggle("active");
-    });
-  }
-};
+for (let i = 0; i < 100; i++) {
+  console.log(i);
+}
