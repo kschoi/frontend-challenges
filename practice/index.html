@@ -10,7 +10,6 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
-    <script src="index.js"></script>
   </head>
   <body>
     <div id="root">
@@ -28,9 +27,23 @@
         </ul>
         <!-- toggle button -->
         <button class="navbar__toggle">
-          <span class="sr-only">메뉴 토글</span>
+          <span class="navbar__toggleIcon">
+            <span class="sr-only">메뉴 토글</span>
+          </span>
         </button>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        const navbar = document.querySelector(".navbar");
+        const navbarToggle = document.querySelector(".navbar__toggle");
+
+        if (navbar && navbarToggle) {
+          navbarToggle.addEventListener("click", function () {
+            navbar.classList.toggle("active");
+          });
+        }
+      });
+    </script>
   </body>
 </html>

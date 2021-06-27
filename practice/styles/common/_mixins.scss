@@ -1,8 +1,38 @@
 @import "./variables";
 
+@mixin respond-upper($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: ($breakpoint-value)) {
+      @content;
+    }
+  } @else {
+    @error "브레이크 포인트를 잘못 넣으셨어요!";
+  }
+}
+
 @mixin respond-below($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @content;
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
   } @else {
+    @error "브레이크 포인트를 잘못 넣으셨어요!";
+  }
+}
+
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-value: map-get($breakpoints, $lower);
+    $upper-value: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-value) and (max-width: ($upper-value - 1)) {
+      @content;
+    }
+  } @else {
+    @error "브레이크 포인트를 잘못 넣으셨어요!";
   }
 }

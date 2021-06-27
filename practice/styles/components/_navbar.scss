@@ -33,8 +33,33 @@
   display: none;
 }
 
-@include respond-below(sm) {
-  body {
-    background: green;
+@include respond-below(md) {
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__toggle {
+    display: block;
+    position: relative;
+    min-width: 2rem;
+    min-height: 2rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+  }
+  .navbar__toggleIcon,
+  .navbar__toggleIcon::before,
+  .navbar__toggleIcon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 19px;
+    height: 1px;
+    background: #fff;
+  }
+  .navbar__toggleIcon::before {
+    top: -5px;
+  }
+  .navbar__toggleIcon::after {
+    bottom: -5px;
   }
 }
