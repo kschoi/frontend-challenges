@@ -34,3 +34,35 @@ window.onload = function () {
 
 // // 이벤트 프로퍼티에 클로저를 할당
 // toggleBtn.onclick = toggle;
+
+/******************************************
+ * 3. 클로저로 카운터 구현하기
+ ******************************************/
+// function counter() {
+//   let count = 0;
+//   return function () {
+//     return count++;
+//   };
+// }
+
+// const countValue = counter();
+// countValue(); // 0
+// countValue(); // 1
+// countValue(); // 2
+
+/******************************************
+ * 3. 클로저로 adder 구현하기
+ ******************************************/
+// function adder(number1) {
+//   return function (number2) {
+//     return number1 + number2;
+//   };
+// }
+
+// const addTen = adder(10);
+// addTen(5); //15
+// addTen(7); //17
+
+// const addFive = adder(5);
+// addFive(100); //105
+// addFive(150); //155
