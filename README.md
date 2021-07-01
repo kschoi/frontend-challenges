@@ -35,7 +35,4 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 1. [simple-layout](https://github.com/kschoi/simple-layout) - 동영상 백그라운드를 가진 간단한 레이아웃 예제입니다.
 2. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
 3. [pizza-play](https://github.com/kschoi/pizza-play) - React, Framer-motion으로 만든 페이지 라우팅 애니메이션 예제입니다.
-
-<!--
-3. [i-love-cat](./4-projects/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
--->
+4. [i-love-cat](https://github.com/kschoi/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
