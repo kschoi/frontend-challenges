@@ -51,7 +51,7 @@ window.onload = function () {
 // countValue(); // 2
 
 /******************************************
- * 3. 클로저로 adder 구현하기
+ * 4. 클로저로 adder 구현하기
  ******************************************/
 // function adder(number1) {
 //   return function (number2) {
