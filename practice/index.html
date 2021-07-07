@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
+    <script type="module" src="js/main.js"></script>
   </head>
   <body>
     <div id="root">
@@ -34,16 +35,7 @@
       </div>
     </div>
     <script>
-      window.addEventListener("load", function () {
-        const navbar = document.querySelector(".navbar");
-        const navbarToggle = document.querySelector(".navbar__toggle");
-
-        if (navbar && navbarToggle) {
-          navbarToggle.addEventListener("click", function () {
-            navbar.classList.toggle("active");
-          });
-        }
-      });
+      console.log(h);
     </script>
   </body>
 </html>
