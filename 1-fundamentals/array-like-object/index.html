@@ -5,7 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <script>
+      "use strict";
+
+      const parentDiv = document.getElementById("parent");
+      const childDivs = document.querySelectorAll(".child");
+      const childDivsAgain = document.getElementsByClassName("child");
+
+      // // querySelectorAll
+      // console.log(Array.isArray(childDivs)); // false
+      // console.log(childDivs instanceof Array); // false
+      // console.log(childDivs.constructor.name); // NodeList
+
+      // // document.getElementsByClassName
+      // console.log(Array.isArray(childDivsAgain)); // false
+      // console.log(childDivsAgain instanceof Array); // false
+      // console.log(childDivsAgain.constructor.name); // HTMLCollection
+
+      // // length 결과 1.
+      // console.log(childDivs.length); //=> 4
+      // console.log(childDivsAgain.length); //=> 4
+
+      // // 새로운 .child 추가
+      // const newDiv = document.createElement("div");
+      // newDiv.className = "child";
+      // parentDiv.appendChild(newDiv);
+
+      // // length 결과 2.
+      // console.log(childDivs.length); //=> 4
+      // console.log(childDivsAgain.length); //=> 5
+    </script>
+  </body>
 </html>
