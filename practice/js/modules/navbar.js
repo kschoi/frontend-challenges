@@ -12,19 +12,26 @@ class Navbar {
   }
 
   init() {
+    if (!this.el) return;
+
     this.attatchEventListeners();
   }
 
   attatchEventListeners() {
     window.addEventListener("load", () => {
-      const navbarToggle = this.el.querySelector(this.toggleButtonSelector);
-
-      if (this.el && navbarToggle) {
-        navbarToggle.addEventListener("click", () => {
-          this.el.classList.toggle(this.activeClassName);
-        });
-      }
+      this.el.addEventListener("click", this.onClick.bind(this));
     });
+  }
+
+  onClick(e) {
+    const toggleBtn = e.target.closest("button");
+    if (toggleBtn) {
+      this.onToggle();
+    }
+  }
+
+  onToggle() {
+    this.el.classList.toggle(this.activeClassName);
   }
 }
 
