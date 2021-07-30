@@ -1,12 +1,8 @@
 "use strict";
 
-window.onload = () => {
-  const navbar = document.querySelector(".navbar");
-  const navbarToggle = document.querySelector(".navbar__toggle");
+import Navbar from "./modules/navbar.js";
 
-  if (navbar && navbarToggle) {
-    navbarToggle.addEventListener("click", () => {
-      navbar.classList.toggle("active");
-    });
-  }
-};
+const navbar = new Navbar({
+  el: document.querySelector(".navbar"),
+});
+navbar.init();
