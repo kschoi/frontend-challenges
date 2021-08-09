@@ -31,6 +31,7 @@ class Stack {
   }
 }
 
+// 스택 인스턴스 생성
 var stack = new Stack();
 
 // 빈 스택 여부 확인

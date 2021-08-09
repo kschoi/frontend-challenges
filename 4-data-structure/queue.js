@@ -31,6 +31,7 @@ class Queue {
   }
 }
 
+// 큐 인스턴스 생성
 var queue = new Queue();
 
 // 빈 큐 여부 확인
