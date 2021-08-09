@@ -1,26 +1,34 @@
-function Queue() {
-  var items = [];
+class Queue {
+  #items = [];
 
-  this.enqueue = (element) => {
-    items.push(element);
-  };
+  enqueue(...elements) {
+    return this.#items.push(...elements);
+  }
 
-  this.dequeue = () => items.shift();
+  dequeue() {
+    return this.#items.shift();
+  }
 
-  this.front = () => items[0];
+  front() {
+    return this.#items[0];
+  }
 
-  this.isEmpty = () => items.length === 0;
+  isEmpty() {
+    return this.#items.length === 0;
+  }
 
-  this.size = () => items.length;
+  size() {
+    return this.#items.length;
+  }
 
-  this.clear = () => {
-    items = [];
-  };
+  clear() {
+    this.#items = [];
+  }
 
   // print는 큐에 쌓인 내용물을 콘솔에서 확인해보는 헬퍼 메소드입니다.
-  this.print = () => {
-    console.log(items.toString());
-  };
+  print() {
+    console.log(this.#items.toString());
+  }
 }
 
 var queue = new Queue();

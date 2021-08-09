@@ -1,26 +1,34 @@
-function Stack() {
-  var items = [];
+class Stack {
+  #items = [];
 
-  this.push = (element) => {
-    items.push(element);
-  };
+  push(...elements) {
+    return this.#items.push(...elements);
+  }
 
-  this.pop = () => items.pop();
+  pop() {
+    return this.#items.pop();
+  }
 
-  this.peek = () => items[items.length - 1];
+  peek() {
+    return this.#items[this.#items.length - 1];
+  }
 
-  this.isEmpty = () => items.length === 0;
+  isEmpty() {
+    return this.#items.length === 0;
+  }
 
-  this.size = () => items.length;
+  size() {
+    return this.#items.length;
+  }
 
-  this.clear = () => {
-    items = [];
-  };
+  clear() {
+    this.#items = [];
+  }
 
   // print는 스택에 쌓인 내용물을 콘솔에서 확인해보는 헬퍼 메소드입니다.
-  this.print = () => {
-    console.log(items.toString());
-  };
+  print() {
+    console.log(this.#items.toString());
+  }
 }
 
 var stack = new Stack();

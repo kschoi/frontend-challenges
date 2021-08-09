@@ -32,10 +32,11 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## 4. Data Structure
 
-1. [array](./4-data-structure/array.js) - 자바스크립트로 구현하는 2차원 배열 자료구조 예제입니다.
-2. [stack](./4-data-structure/stack.js) - 자바스크립트로 구현하는 스택 자료구조 예제입니다.
-3. [queue](./4-data-structure/queue.js) - 자바스크립트로 구현하는 큐 자료구조 예제입니다.
-4. [linked list](./4-data-structure/linked-list.js) - 자바스크립트로 구현하는 연결리스트 자료구조 예제입니다.
+1. [array](./4-data-structure/array.js) - 자바스크립트 2차원 배열 자료구조 예제입니다.
+2. [stack](./4-data-structure/stack.js) - 자바스크립트 스택 자료구조 예제입니다.
+3. [queue](./4-data-structure/queue.js) - 자바스크립트 큐 자료구조 예제입니다.
+4. [linked list](./4-data-structure/linked-list.js) - 자바스크립트 연결리스트 자료구조 예제입니다.
+5. [set](./4-data-structure/set.js) - 자바스크립트 집합 자료구조 예제입니다.
 
 <br>
 
