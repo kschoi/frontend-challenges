@@ -30,7 +30,16 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## 4. Projects
+## 4. Data Structure
+
+1. [array](./4-data-structure/array.js) - 자바스크립트로 구현하는 2차원 배열 자료구조 예제입니다.
+2. [stack](./4-data-structure/stack.js) - 자바스크립트로 구현하는 스택 자료구조 예제입니다.
+3. [queue](./4-data-structure/queue.js) - 자바스크립트로 구현하는 큐 자료구조 예제입니다.
+4. [linked list](./4-data-structure/linked-list.js) - 자바스크립트로 구현하는 연결리스트 자료구조 예제입니다.
+
+<br>
+
+## Projects
 
 1. [simple-layout](https://github.com/kschoi/simple-layout) - 동영상 백그라운드를 가진 간단한 레이아웃 예제입니다.
 2. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
