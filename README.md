@@ -4,7 +4,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## 1. Fundamentals
+## Fundamentals
 
 1. [array](./1-fundamentals/array) - 대표적인 array api를 살펴봅니다.
 2. [array-like-object](./1-fundamentals/array-like-object) - array-like 객체를 이해하기 위한 예제입니다.
@@ -13,7 +13,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## 2. DOM
+## DOM
 
 1. [event-delegation](./2-dom/event-delegation) - 'behavior' 패턴 등 이벤트 위임을 이해하기 위한 예제입니다.
 2. [browser-default-actions](./2-dom/browser-default-actions) - 브라우저 기본 액션을 막는 방법과, 스크롤 성능을 향상시킬 수 있는 passive 옵션을 살펴봅니다.
@@ -21,7 +21,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## 3. UI Components
+## UI Components
 
 1. [notification](./3-ui/notification) - 로드 이후 하단에 노출되었다가 사라지는 공지 알림 UI 예제입니다.
 2. [navbar](./3-ui/navbar) - SCSS를 활용한 반응형 네비게이션 바 UI 예제입니다.
@@ -30,7 +30,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## 4. Data Structure
+## Data Structure
 
 1. [array](./4-data-structure/array.js) - 자바스크립트 2차원 배열 자료구조 예제입니다.
 2. [stack](./4-data-structure/stack.js) - 자바스크립트 스택 자료구조 예제입니다.
