@@ -10,6 +10,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 2. [array-like-object](./1-fundamentals/array-like-object) - array-like 객체를 이해하기 위한 예제입니다.
 3. [closure](./1-fundamentals/closure) - 클로저를 이해하기 위한 예제입니다.
 4. [immutable](./1-fundamentals/immutable) - 오브젝트 타입의 불변성을 지키기 위한 방법을 살펴봅니다.
+5. [observer](./1-fundamentals/observer) - MutationObserver와 IntersectionObserver 예제입니다.
 
 <br>
 

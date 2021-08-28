@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mutation observer</title>
+  </head>
+  <body>
+    <button onclick="addRow();">추가하기</button>
+
+    <ul>
+      <li>1번 아이템</li>
+    </ul>
+
+    <script>
+      function addRow() {
+        let list = document.querySelector("ul");
+        let lastRow = document.querySelector("li:last-child");
+        let newRowNum =
+          parseInt(lastRow.textContent.replace(/[^0-9]/g, "")) + 1;
+
+        let row = document.createElement("li");
+        row.textContent = newRowNum + "번째 아이템";
+
+        list.appendChild(row);
+      }
+
+      // Mutation Observer
+      // 감시 대상 node 선택
+      let target = document.querySelector("ul");
+
+      // 감시자 인스턴스 만들기
+      let observer = new MutationObserver((mutations) => {
+        // 노드가 변경 됐을 때의 작업
+        alert("DOM 변경 감지");
+      });
+
+      // 감시자의 설정
+      let option = {
+        attributes: true,
+        childList: true,
+        characterData: true,
+      };
+
+      // 대상 노드에 감시자 전달
+      observer.observe(target, option);
+    </script>
+  </body>
+</html>
