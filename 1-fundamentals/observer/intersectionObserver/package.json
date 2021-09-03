@@ -1,0 +1,16 @@
+{
+  "name": "observer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html watch"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.3",
+    "uuid": "^8.3.2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
