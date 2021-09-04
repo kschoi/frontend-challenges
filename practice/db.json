@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "email": "first@email.com"
+    },
+    {
+      "email": "a@ssg.com",
+      "id": 2
+    },
+    {
+      "email": "testtesttest@ssg.com",
+      "id": 3
+    }
+  ]
+}
