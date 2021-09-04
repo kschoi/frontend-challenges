@@ -5,6 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- html attributes -->
+    <form id="myForm">
+      <label for="email"></label>
+      <input id="email" type="email" required value="a@ssg.com" /><br />
+      <button>제출</button>
+    </form>
+    <script>
+      // 0. query select
+      const form = document.getElementById("myForm");
+
+      // 1. addEventListener
+      form.addEventListener("submit", function (e) {
+        // 2. 이벤트 기본 동작 막기
+        e.preventDefault();
+        e.stopPropagation();
+
+        // 3. 입력받은 정보를 어떻게 알까?
+        const email = form.querySelector("#email").value;
+
+        async function getData() {
+          const res = await axios.post(
+            "https://my-json-server.typicode.com/konkuk-project/developer_info/posts",
+            {
+              email,
+            }
+          );
+          console.log(res.data);
+        }
+
+        getData();
+
+        // 4. 제출
+        // form.submit();
+      });
+    </script>
+  </body>
 </html>
