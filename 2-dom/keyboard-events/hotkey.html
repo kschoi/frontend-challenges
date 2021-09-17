@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>"Q"와 "W"를 함께 눌러보세요.</p>
+
+    <script>
+      // 우리는 두 개의 핸들러를 사용해야 합니다.(document.onkeydown와 document.onkeyup)
+      function runOnKeys(func, ...codes) {
+        // 현재 누른 키를 유지하기 위해 Set을 생성합니다.
+        let pressed = new Set();
+
+        document.addEventListener("keydown", function (event) {
+          pressed.add(event.code);
+
+          // 사용자가 입력한 모든 키가 set에 담겨있나요?
+          for (let code of codes) {
+            if (!pressed.has(code)) {
+              return;
+            }
+          }
+
+          pressed.clear();
+
+          func();
+        });
+
+        document.addEventListener("keyup", function (event) {
+          pressed.delete(event.code);
+        });
+      }
+
+      runOnKeys(() => alert("Hello!"), "KeyQ", "KeyW");
+    </script>
+  </body>
+</html>
