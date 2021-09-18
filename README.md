@@ -44,6 +44,12 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
+## Game
+
+1. [chrome dino game](https://github.com/kschoi/chrome-dino-game) - 자바스크립트 크롬 공룡 게임 예제입니다.
+
+<br>
+
 ## Projects
 
 1. [simple-layout](https://github.com/kschoi/simple-layout) - 동영상 백그라운드를 가진 간단한 레이아웃 예제입니다.
