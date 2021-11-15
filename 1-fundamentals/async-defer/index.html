@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.time("a.js");
+      console.time("b.js");
+      console.time("c.js");
+      console.time("html bottom");
+    </script>
+    <!-- 첫번째 script 태그에 async, defer를 각각 사용하고 브라우저 콘솔창을 확인해보세요. -->
+    <script src="./a.js"></script>
+    <script src="./b.js"></script>
+    <script src="./c.js"></script>
+    <script>
+      console.timeEnd("html bottom");
+    </script>
+  </body>
+</html>

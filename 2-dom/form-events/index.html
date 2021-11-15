@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <!-- 
+      # 실습1
+      ## method
+      * get: 검색 후에 URL 주소를 복사해서, 다른 사람과 공유 할때 유용. CRUD중 Read에 속함.
+      * post: CRUD중 Create, Update, Delete를 처리함
+      ## action
+      * 쿼리스트링을 전달받을 경로 (ex. https://www.google.com)
+        <form method="get" action="./index.html">
+        <form method="get" action="https://www.google.com">
+      # onsubmit
+    -->
+    <div id="app">
+      <div id="list"></div>
+      <div style="display: none">
+        <div id="listItem">
+          <input type="text" name="names" value="" />
+          <button type="button" data-action="update">update</button>
+          <button type="button" data-action="delete">delete</button>
+        </div>
+      </div>
+      <form method="get">
+        <input
+          type="text"
+          name="input-text"
+          value=""
+          placeholder="Name"
+          required
+        />
+        <input type="hidden" name="input-hidden" value="숨겨진값" />
+        <input type="submit" value="create" />
+      </form>
+    </div>
+  </body>
+</html>
