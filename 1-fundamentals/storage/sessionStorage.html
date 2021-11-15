@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="field" value="" />
+    <script>
+      /**
+       * sessionStorage
+       *
+       * 세션스토리지의 데이터는 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라집니다.
+       * 데이터는 문자열로 저장됩니다.
+       **/
+      // -----------------------------------------------------------------------------------
+      // 실습1 - 세션스토리지 데이터 저장/가져오기/삭제하기
+      sessionStorage.setItem("key", "value");
+      let data = sessionStorage.getItem("key");
+      sessionStorage.removeItem("key");
+      sessionStorage.clear();
+      // -----------------------------------------------------------------------------------
+      // 실습2 - 텍스트 필드 작성내용 새로고침해도 사라지지 않게 하기.
+      let field = document.getElementById("field");
+
+      if (sessionStorage.getItem("autosave")) {
+        field.value = sessionStorage.getItem("autosave");
+      }
+
+      field.addEventListener("change", function () {
+        sessionStorage.setItem("autosave", field.value);
+      });
+      // -----------------------------------------------------------------------------------
+      // 실습3 - 세션스토리지 데이터 직렬화(배열을 문자열로, 문자열을 배열로)
+      const fruits = ["사과", "배", "딸기"];
+
+      // 세션스토리지에 배열을 저장할때는 JSON.stringify 메서드로 문자열로 직렬화
+      sessionStorage.setItem("fruits", JSON.stringify(fruits));
+
+      // 세션스토리지의 배열 데이터를 가져올 때는 JSON.parse 메서드로 자바스크립트 배열로 직렬화
+      const fruitsFromStorage = sessionStorage.getItem("fruits");
+      const parsedFruits = JSON.parse(fruitsFromStorage);
+      parsedFruits.push("포도");
+      console.log(parsedFruits);
+      // -----------------------------------------------------------------------------------
+    </script>
+  </body>
+</html>
