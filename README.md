@@ -6,10 +6,16 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## Fundamentals
 
-1. [array](./1-fundamentals/array) - 대표적인 array api를 살펴봅니다.
-2. [array-like-object](./1-fundamentals/array-like-object) - array-like 객체를 이해하기 위한 예제입니다.
-3. [closure](./1-fundamentals/closure) - 클로저를 이해하기 위한 예제입니다.
-4. [immutable](./1-fundamentals/immutable) - 오브젝트 타입의 불변성을 지키기 위한 방법을 살펴봅니다.
+1. [async와 defer](./1-fundamentals/async-defer) - script의 async와 defer를 알아봅니다.
+2. [variable과 constant](./1-fundamentals/variable-and-constant) - 자바스크립트의 변수와 상수를 살펴봅니다.
+3. [statements](./1-fundamentals/statements) - if, switch 문을 살펴봅니다.
+4. [operators](./1-fundamentals/operators) - 자바스크림트의 다양한 연산자를 알아봅니다.
+5. [object](./1-fundamentals/object) - 기본 오브젝트 CRUD 방법을 살펴봅니다.
+6. [array](./1-fundamentals/array) - 대표적인 array api를 살펴봅니다.
+7. [array-like-object](./1-fundamentals/array-like-object) - array-like 객체를 이해하기 위한 예제입니다.
+8. [closure](./1-fundamentals/closure) - 클로저를 이해하기 위한 예제입니다.
+9. [immutable](./1-fundamentals/immutable) - 오브젝트 타입의 불변성을 지키기 위한 방법을 살펴봅니다.
+10. [localStorage와 sessionStorage](./1-fundamentals/array) - localStorage와 sessionStorage 사용 예제입니다.
 
 <br>
 
