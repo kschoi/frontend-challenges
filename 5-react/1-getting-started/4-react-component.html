@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      // React.Component는 ES6 class를 사용하여 React 컴포넌트를 정의할 때에 기초가 되는 class입니다.
+      class Hello extends React.Component {
+        render() {
+          return React.createElement("div", null, `Hello ${this.props.toWhat}`);
+        }
+      }
+    </script>
+    <script>
+      ReactDOM.render(
+        React.createElement(Hello, { toWhat: "World" }, null),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

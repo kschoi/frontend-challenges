@@ -50,9 +50,9 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
-## Game
+## React
 
-1. [chrome dino game](https://github.com/kschoi/chrome-dino-game) - 자바스크립트 크롬 공룡 게임 예제입니다.
+1. [시작하기](./5-react/1-getting-started) - ReactDOM render 함수와 React.createElement, React.Component, JSX 등 기본 이해 예제입니다.
 
 <br>
 
@@ -62,4 +62,4 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 2. [simple-react-shopping-mall](https://github.com/kschoi/simple-react-shopping-mall) - 리액트 기본 개념을 익히기 위한 간단한 쇼핑몰 SPA 예제입니다.
 3. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
 4. [pizza-play](https://github.com/kschoi/pizza-play) - React, Framer-motion으로 만든 페이지 라우팅 애니메이션 예제입니다.
-5. [i-love-cat](https://github.com/kschoi/i-love-cat) - 2020 프로그래머스 프론트엔드 데브매칭 복기 예제입니다.
+5. [chrome dino game](https://github.com/kschoi/chrome-dino-game) - 자바스크립트 크롬 공룡 게임 예제입니다.

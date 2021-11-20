@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      ReactDOM.render(
+        React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "div",
+            null,
+            React.createElement("h1", null, "주제"),
+            React.createElement(
+              "ul",
+              null,
+              React.createElement("li", null, "React"),
+              React.createElement("li", null, "Vue")
+            )
+          )
+        ),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>
