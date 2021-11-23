@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // 코드를 바벨 플레이그라운드에서 컴파일해보세요!
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            first: Math.ceil(Math.random() * 9),
+            second: Math.ceil(Math.random() * 9),
+            value: "",
+            result: "",
+          };
+        }
+
+        onChange = (e) => {
+          this.setState({ value: e.target.value });
+        };
+
+        onSubmit = (e) => {
+          e.preventDefault();
+          if (
+            parseInt(this.state.value) ===
+            this.state.first * this.state.second
+          ) {
+            this.setState({
+              first: Math.ceil(Math.random() * 9),
+              second: Math.ceil(Math.random() * 9),
+              value: "",
+              result: "정답",
+            });
+            this.input.focus();
+          } else {
+            this.setState({
+              result: "땡",
+              value: "",
+            });
+            this.input.focus();
+          }
+        };
+
+        onRefInput = (c) => {
+          this.input = c;
+        };
+
+        render() {
+          // setState를 할 때마다 render 함수가 실행됩니다.
+          console.log("render 함수가 실행되었습니다.");
+
+          return (
+            <>
+              <p>
+                {this.state.first}x{this.state.second}=
+              </p>
+              <form onSubmit={this.onSubmit}>
+                {/* ref는 함수입니다. */}
+                <input
+                  ref={this.onRefInput}
+                  type="number"
+                  value={this.state.value}
+                  onChange={this.onChange}
+                />
+                <button>입력</button>
+              </form>
+              <p>{this.state.result}</p>
+            </>
+          );
+        }
+      }
+      ReactDOM.render(<App />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

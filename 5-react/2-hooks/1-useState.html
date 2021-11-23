@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // 클래스형 컴포넌트에서는 상태가 바뀌면 render 함수만 재실행되었지만
+      // 함수형 컴포넌트에서는 상태가 바뀌면 대부분 통째로 재실행될거에요.
+      const App = () => {
+        const [first, setFirst] = React.useState(Math.ceil(Math.random() * 9));
+        const [second, setSecond] = React.useState(
+          Math.ceil(Math.random() * 9)
+        );
+        const [value, setValue] = React.useState("");
+        const [result, setResult] = React.useState("");
+
+        const onChange = (e) => {
+          setValue(e.target.value);
+        };
+
+        const onSubmit = (e) => {
+          e.preventDefault();
+          if (parseInt(value) === first * second) {
+            setFirst(Math.ceil(Math.random() * 9));
+            setSecond(Math.ceil(Math.random() * 9));
+            setValue("");
+            setResult("정답");
+          } else {
+            setValue("");
+            setResult("땡");
+          }
+        };
+
+        return (
+          <>
+            <p>
+              {first}x{second}=
+            </p>
+            <form onSubmit={onSubmit}>
+              <input type="number" value={value} onChange={onChange} />
+              <button>입력</button>
+            </form>
+            <p>{result}</p>
+          </>
+        );
+      };
+      ReactDOM.render(<App />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

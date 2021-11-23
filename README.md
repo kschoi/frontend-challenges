@@ -52,7 +52,9 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## React
 
-1. [시작하기](./5-react/1-getting-started) - ReactDOM render 함수와 React.createElement, React.Component, JSX 등 기본 이해 예제입니다.
+1. [시작하기](./5-react/1-getting-started) - ReactDOM render 함수와 React.createElement, React.Component, JSX, babel 기본 이해 예제입니다.
+2. [hooks](./5-react/2-hooks) - 함수형 컴포넌트와 useState, useRef 기본 예제입니다.
+3. [webpack](./5-react/3-webpack) - webpack 구성 과정을 이해하기 위한 예제입니다.
 
 <br>
 
