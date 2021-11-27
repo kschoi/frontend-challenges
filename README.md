@@ -60,8 +60,9 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## Projects
 
-1. [simple-layout](https://github.com/kschoi/simple-layout) - 동영상 백그라운드를 가진 간단한 레이아웃 예제입니다.
+1. [blog 만들기](https://github.com/kschoi/frontend-challenge-blog) - react, typescript, mobx를 사용하여 블로그 만들기 예제입니다.
 2. [simple-react-shopping-mall](https://github.com/kschoi/simple-react-shopping-mall) - 리액트 기본 개념을 익히기 위한 간단한 쇼핑몰 SPA 예제입니다.
-3. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
-4. [pizza-play](https://github.com/kschoi/pizza-play) - React, Framer-motion으로 만든 페이지 라우팅 애니메이션 예제입니다.
-5. [chrome dino game](https://github.com/kschoi/chrome-dino-game) - 자바스크립트 크롬 공룡 게임 예제입니다.
+3. [simple-layout](https://github.com/kschoi/simple-layout) - 동영상 백그라운드를 가진 간단한 레이아웃 예제입니다.
+4. [i-like-lemons](https://github.com/kschoi/i-like-lemons) - React, Tailwind CSS, Framer-motion을 사용한 3D 애니메이션 예제입니다.
+5. [pizza-play](https://github.com/kschoi/pizza-play) - React, Framer-motion으로 만든 페이지 라우팅 애니메이션 예제입니다.
+6. [chrome dino game](https://github.com/kschoi/chrome-dino-game) - 자바스크립트 크롬 공룡 게임 예제입니다.
