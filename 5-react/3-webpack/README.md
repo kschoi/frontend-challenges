@@ -28,11 +28,25 @@ yarn build
 yarn clean
 ```
 
-## webpack.config.js
+## webpack
+
+### webpack.config.js
 
 프로젝트 루트에 webpack.config.js 파일을 생성하고, webpack 설정을 파일로 관리할 수 있습니다.
 
 ```
 webpack --config webpack.config.js
 // webpack은 webpack.config.js 파일이 존재한다면 기본 설정 파일로 사용하므로 --config는 생략될 수 있습니다.
+```
+
+바벨 및 웹팩 바벨 로더 추가하기
+
+```
+yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader
+```
+
+webpack-dev-server와 핫리로딩 관련 플러그인 추가하기
+
+```
+yarn add -D react-refresh @pmmmwh/react-refresh-webpack-plugin webpack-dev-server
 ```
