@@ -58,6 +58,12 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 <br>
 
+## Node
+
+1. [createServer](./6-node/1-createServer) - http 모듈을 사용하여 서버를 만들어봅니다.
+
+<br>
+
 ## Projects
 
 1. [blog 만들기](https://github.com/kschoi/frontend-challenge-blog) - react, typescript, mobx를 사용하여 블로그 만들기 예제입니다.
