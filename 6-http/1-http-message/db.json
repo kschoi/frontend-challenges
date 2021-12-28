@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "title": "내가 바꾸고 싶은 이름",
+      "author": "내이름",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "1-http-message",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "api": "npx json-server --watch db.json --port 3004"
+  }
+}

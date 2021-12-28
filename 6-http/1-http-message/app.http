@@ -1,0 +1,17 @@
+# @name 포스트 리스트
+# https://jsonplaceholder.typicode.com/posts
+### 
+GET /posts
+Host: jsonplaceholder.typicode.com
+
+# @name 포스트 리스트 (filter)
+# https://jsonplaceholder.typicode.com/posts?id=1&id=2
+###
+GET /posts?id=1&id=2
+Host: jsonplaceholder.typicode.com
+
+# @name 포스트 리스트 (paginate)
+# https://jsonplaceholder.typicode.com/posts?_page=5&_limit=5
+###
+GET /posts?_page=5&_limit=5
+Host: jsonplaceholder.typicode.com

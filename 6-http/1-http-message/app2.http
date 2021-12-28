@@ -1,0 +1,43 @@
+@baseURL = http://localhost:3004
+@acceptType = application/json
+@contentType = application/json
+
+# @name 포스트 리스트
+### 
+GET {{baseURL}}/posts
+
+# @name 포스트 등록
+###
+POST {{baseURL}}/posts
+Content-Type: {{contentType}}
+Accept: {{acceptType}}
+
+{
+  "title": "http", 
+  "author": "chloe"
+}
+
+# @name 포스트 업데이트
+###
+PATCH {{baseURL}}/posts/1
+Content-Type: {{contentType}}
+Accept: {{acceptType}}
+
+{
+  "title": "내가 바꾸고 싶은 이름"
+}
+
+# @name 포스트 업데이트
+###
+PUT {{baseURL}}/posts/1
+Content-Type: {{contentType}}
+Accept: {{acceptType}}
+
+{
+  "title": "내가 바꾸고 싶은 이름",
+  "author": "내이름"
+}
+
+# @name 포스트 삭제
+###
+DELETE {{baseURL}}/posts/2
