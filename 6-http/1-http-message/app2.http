@@ -2,11 +2,27 @@
 @acceptType = application/json
 @contentType = application/json
 
-# @name 포스트 리스트
+#------------------------------------------------
+# @name getPosts
+# 포스트 리스트 가져오기
 ### 
 GET {{baseURL}}/posts
 
-# @name 포스트 등록
+#------------------------------------------------
+# @name getPost
+# 포스트 가져오기
+### 
+GET {{baseURL}}/posts/1
+
+#------------------------------------------------
+# @name deletePost
+# 포스트 삭제하기
+###
+DELETE {{baseURL}}/posts/1
+
+#------------------------------------------------
+# @name postPost
+# 포스트 등록하기
 ###
 POST {{baseURL}}/posts
 Content-Type: {{contentType}}
@@ -17,7 +33,9 @@ Accept: {{acceptType}}
   "author": "chloe"
 }
 
-# @name 포스트 업데이트
+#------------------------------------------------
+# @name patchPost
+# 포스트 업데이트(부분)
 ###
 PATCH {{baseURL}}/posts/1
 Content-Type: {{contentType}}
@@ -27,9 +45,11 @@ Accept: {{acceptType}}
   "title": "내가 바꾸고 싶은 이름"
 }
 
-# @name 포스트 업데이트
+#------------------------------------------------
+# @name putPost
+# 포스트 업데이트(교체)
 ###
-PUT {{baseURL}}/posts/1
+PUT {{baseURL}}/posts/2
 Content-Type: {{contentType}}
 Accept: {{acceptType}}
 
@@ -38,6 +58,8 @@ Accept: {{acceptType}}
   "author": "내이름"
 }
 
-# @name 포스트 삭제
+#------------------------------------------------
+# @name getHEAD
+# 지정한 리소스에 대한 응답에서, HTTP 헤더 부분만 보내라
 ###
-DELETE {{baseURL}}/posts/2
+HEAD {{baseURL}}/posts/2

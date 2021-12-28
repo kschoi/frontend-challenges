@@ -3,16 +3,20 @@
     {
       "title": "내가 바꾸고 싶은 이름",
       "author": "내이름",
-      "id": 1
-    }
-  ],
-  "comments": [
+      "id": 2
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "http",
+      "author": "chloe",
+      "id": 3
+    },
+    {
+      "title": "http",
+      "author": "chloe",
+      "id": 4
     }
   ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

@@ -1,17 +1,33 @@
-# @name 포스트 리스트
+# HTTP 메시지는 단순한 줄 단위의 문자열입니다.
+# HTTP 메시지는 시작줄/헤더/본문의 구조를 가집니다.
+# 1. 시작줄
+# 메시지의 첫 줄로, 요청이라면 무엇을 해야 하는지, 응답이라면 무슨 일이 일어났는지를 나타냅니다.
+# 2. 헤더
+# 시작줄 바로 다음 줄로, 0개 이상 올 수 있으며, :으로 구분된 이름과 값으로 구성됩니다.
+# 헤더 다음에는 반드시 한 줄을 비워야 합니다.
+# 3. 본문
+# 헤더 다음에 하나의 빈 줄이 온 뒤의 내용입니다.
+# 이미지, 비디오 등 임의의 이진 데이터나 json, 텍스트 등 어떤 종류의 데이터든 포함할 수 있습니다.
+#
+# 아래 json-placeholder를 사용하여 HTTP 메서드를 이해해보겠습니다.
 # https://jsonplaceholder.typicode.com/posts
+
+# @name getPosts
+# 포스트 리스트 가져오기
 ### 
 GET /posts
 Host: jsonplaceholder.typicode.com
 
-# @name 포스트 리스트 (filter)
-# https://jsonplaceholder.typicode.com/posts?id=1&id=2
+#------------------------------------------------
+# @name getPosts
+# 포스트 리스트 가져오기 (필터)
 ###
 GET /posts?id=1&id=2
 Host: jsonplaceholder.typicode.com
 
-# @name 포스트 리스트 (paginate)
-# https://jsonplaceholder.typicode.com/posts?_page=5&_limit=5
+#------------------------------------------------
+# @name getPosts
+# 포스트 리스트 가져오기 (필터)
 ###
 GET /posts?_page=5&_limit=5
 Host: jsonplaceholder.typicode.com
