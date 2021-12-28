@@ -60,7 +60,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
 ## HTTP
 
-1. [http message](./6-http/app.http) - http 요청 메시지를 작성해봅니다.
+1. [http message](./6-http/1-http-message) - http 요청 메시지를 작성해봅니다.
 
 <br />
 
