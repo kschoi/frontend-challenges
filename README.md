@@ -2,7 +2,7 @@
 
 Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 
-<br>
+<br />
 
 ## Fundamentals
 
@@ -17,7 +17,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 9. [immutable](./1-fundamentals/immutable) - 오브젝트 타입의 불변성을 지키기 위한 방법을 살펴봅니다.
 10. [localStorage와 sessionStorage](./1-fundamentals/array) - localStorage와 sessionStorage 사용 예제입니다.
 
-<br>
+<br />
 
 ## DOM
 
@@ -29,7 +29,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 6. [form events](./2-dom/form-events) - 폼 이벤트 예제입니다.
 7. [observer](./2-dom/observer) - MutationObserver와 IntersectionObserver 예제입니다.
 
-<br>
+<br />
 
 ## UI Components
 
@@ -38,7 +38,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 3. [drawer](./3-ui/drawer) - 서랍형 UI 예제입니다.
 4. [item-list](./3-ui/item-list) - 상품리스트와 스와이퍼 API 적용 UI 예제입니다.
 
-<br>
+<br />
 
 ## Data Structure
 
@@ -48,7 +48,7 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 4. [linked list](./4-data-structure/linked-list.js) - 자바스크립트 연결리스트 자료구조 예제입니다.
 5. [set](./4-data-structure/set.js) - 자바스크립트 집합 자료구조 예제입니다.
 
-<br>
+<br />
 
 ## React
 
@@ -56,13 +56,19 @@ Frontend 개발의 기초를 닦기 위한 예제 모음집입니다.
 2. [hooks](./5-react/2-hooks) - 함수형 컴포넌트와 useState, useRef 기본 예제입니다.
 3. [webpack](./5-react/3-webpack) - webpack 구성 과정을 이해하기 위한 예제입니다.
 
-<br>
+<br />
+
+## HTTP
+
+1. [createServer](./6-http/app.http) - http 요청 메시지를 작성해봅니다.
+
+<br />
 
 ## Node
 
-1. [createServer](./6-node/1-createServer) - http 모듈을 사용하여 서버를 만들어봅니다.
+1. [createServer](./7-node/1-create-server) - http 모듈을 사용하여 서버를 만들어봅니다.
 
-<br>
+<br />
 
 ## Projects
 
