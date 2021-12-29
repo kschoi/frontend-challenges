@@ -62,4 +62,10 @@ Accept: {{acceptType}}
 # @name getHEAD
 # 지정한 리소스에 대한 응답에서, HTTP 헤더 부분만 보내라
 ###
-HEAD {{baseURL}}/posts/2
+HEAD {{baseURL}}/posts
+
+#------------------------------------------------
+# @name getOptions
+# 서버가 어떤 메서드를 수행할 수 있는지 확인
+### 
+OPTIONS {{baseURL}}/posts
