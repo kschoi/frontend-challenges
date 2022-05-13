@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>intersection observer</title>
-    <script defer src="main.js"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
-    <main id="main">
-      <h2>List of Random Names</h2>
-      <ul id="ul"></ul>
-      <button id="load">Load more names</button>
-    </main>
+    <div id="app" class="loading">
+      <ul id="list"></ul>
+      <div id="fetchMore"></div>
+    </div>
   </body>
 </html>
