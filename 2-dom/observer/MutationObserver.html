@@ -24,6 +24,8 @@
         row.textContent = newRowNum + "번째 아이템";
 
         list.appendChild(row);
+
+        // list.setAttribute("className", newRowNum);
       }
 
       // Mutation Observer
@@ -31,20 +33,38 @@
       let target = document.querySelector("ul");
 
       // 감시자 인스턴스 만들기
-      let observer = new MutationObserver((mutations) => {
+      let observer = new MutationObserver((mutationsList, observer) => {
         // 노드가 변경 됐을 때의 작업
-        alert("DOM 변경 감지");
+        console.group("DOM 변경 감지");
+
+        for (const mutation of mutationsList) {
+          if (mutation.type === "childList") {
+            console.log("타겟의 하위 요소 추가 및 제거 감지");
+          } else if (mutation.type === "attributes") {
+            console.log(
+              mutation.attributeName + " 어트리뷰트가 변경되었습니다."
+            );
+          }
+        }
+
+        console.groupEnd();
       });
 
       // 감시자의 설정
-      let option = {
-        attributes: true,
-        childList: true,
-        characterData: true,
+      let config = {
+        childList: true, // 타겟의 하위 요소 추가 및 제거 감지
+        // attributes: true, // 타켓의 속성 변경를 감지
+        // characterData: false,	// 타겟의 데이터 변경 감지
+        // subtree: false,	// 타겟의 자식 노드 아래로도 모두 감지
+        // attributeOldValue: false,	// 타겟의 속성 변경 전 속성 기록
+        // characterDataOldValue: false	// 타겟의 데이터 변경 전 데이터 기록
       };
 
       // 대상 노드에 감시자 전달
-      observer.observe(target, option);
+      observer.observe(target, config);
+
+      // 감시 종료
+      // observer.disconnect();
     </script>
   </body>
 </html>
