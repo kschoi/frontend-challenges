@@ -2821,18 +2821,23 @@ var options = {
   // Use the whole screen as scroll area
   root: null,
   // Do not grow or shrink the root area
-  rootMargin: "10px",
+  rootMargin: "0px",
   // Threshold of 1.0 will fire callback when 100% of element is visible
   threshold: 0.0
 };
-var observer = new IntersectionObserver(function (entries) {
-  // Entries is a list of elements out of our targets that reported a change.
+var observer = new IntersectionObserver(function (entries, observer) {
+  // entries는 IntersectionObserverEntry 객체의 배열
   var _entries = _slicedToArray(entries, 1),
       isIntersecting = _entries[0].isIntersecting;
+
+  console.group("웹 페이지에서 보이는 영역에 등장하거나 사라지는 경우를 감지");
+  console.log(entries[0]);
 
   if (isIntersecting) {
     fetchMore();
   }
+
+  console.groupEnd();
 }, options);
 observer.observe(fetchMoreTrigger);
 },{"./style.css":"style.css","regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","./listRenderer":"listRenderer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -2863,7 +2868,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53512" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60468" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

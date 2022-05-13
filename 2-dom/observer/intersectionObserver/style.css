@@ -35,7 +35,6 @@ body {
 }
 #fetchMore.loading {
   display: block;
-  margin-top: 10px;
   text-align: center;
   line-height: 28px;
   border-top: solid 1px #000;
